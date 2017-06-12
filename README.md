@@ -38,11 +38,14 @@ Response is a signed JWT token (https://jwt.io/introduction/):
 
 Token is constructed from 3 parts separated by dot, the parts are
 ### JWT header
+```
 {
   "alg": "RS256",
   "typ": "JWT"
 }
+```
 ### Payload
+```
 {
     "iat":"Timestamp when token was issued",
     "nbf":"Timestamp of when the token should start being considered valid.",
@@ -50,6 +53,7 @@ Token is constructed from 3 parts separated by dot, the parts are
     ...
     custom fields of whatever we want, such as username, email, realm (community name) etc.
 }
+```
 ### Signature
 Signature in base64, basically payload signed with private RSA key.
 
